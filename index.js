@@ -1,2 +1,2 @@
 require('coffee-script');
-module.exports = require('./lib/ale');
+module.exports = require('./lib/torch');
