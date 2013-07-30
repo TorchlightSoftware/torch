@@ -1,7 +1,7 @@
 {
   "name":"ale",
   "description":"logger -> lager -> ale",
-  "version":"0.0.1",
+  "version":"0.1.0",
   "homepage":"http://github.com/TorchlightSoftware/ale",
   "repository":"git://github.com/TorchlightSoftware/ale.git",
   "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
