@@ -1,9 +1,9 @@
 {
-  "name":"ale",
-  "description":"logger -> lager -> ale",
+  "name":"torch",
+  "description":"CLI logger with colors and deep inspection.",
   "version":"0.1.0",
-  "homepage":"http://github.com/TorchlightSoftware/ale",
-  "repository":"git://github.com/TorchlightSoftware/ale.git",
+  "homepage":"http://github.com/TorchlightSoftware/torch",
+  "repository":"git://github.com/TorchlightSoftware/torch.git",
   "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
   "main":"./index.js",
 
@@ -21,7 +21,7 @@
   "licenses":[
     {
       "type":"MIT",
-      "url":"http://github.com/torchlightsoftware/ale/raw/master/LICENSE"
+      "url":"http://github.com/torchlightsoftware/torch/raw/master/LICENSE"
     }
   ],
   "scripts": {

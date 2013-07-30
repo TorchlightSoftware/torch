@@ -1,13 +1,9 @@
-# Ale
+# Torch
 
-Alternate Logging Environment
-
-## Features
-
-Supports colors and automatically runs inspect to infinite depth on all inputs.
+Shed some light on the dark morass that is your code.  A logger with colors and deep inspection.
 
 ```javascript
-log = require('ale');
+log = require('torch');
 
 log.grey('stuff:'.blue, stuff);
 
