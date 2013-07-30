@@ -1,0 +1,30 @@
+{
+  "name":"ale",
+  "description":"logger -> lager -> ale",
+  "version":"0.0.1",
+  "homepage":"http://github.com/TorchlightSoftware/ale",
+  "repository":"git://github.com/TorchlightSoftware/ale.git",
+  "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
+  "main":"./index.js",
+
+  "dependencies":{
+    "colors":"*",
+    "coffee-script":"*"
+  },
+  "devDependencies":{
+    "mocha":"*",
+    "should":"*"
+  },
+  "engines":{
+    "node":">= 0.8.4"
+  },
+  "licenses":[
+    {
+      "type":"MIT",
+      "url":"http://github.com/torchlightsoftware/ale/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test":"mocha"
+  }
+}
