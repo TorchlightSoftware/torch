@@ -5,12 +5,14 @@ Shed some light on the dark morass that is your code.  A logger with colors and 
 ```javascript
 log = require('torch');
 
-log.grey('stuff:'.blue, stuff);
+log.gray('stuff:'.blue, stuff);
 
 log(deepNestedObject);
 
 // {foo: {bar: {baz: 1}}}
 ```
+
+Torch uses Chalk.  For a full list of supported colors, see Chalk's readme:  https://github.com/sindresorhus/chalk
 
 ## LICENSE
 

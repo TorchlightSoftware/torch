@@ -15,7 +15,7 @@ log = (color, args...) ->
 
 logger = curry log, null
 
-for color in ['white', 'grey', 'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'yellow']
+for color in Object.keys chalk.styles
   logger[color] = curry log, color
 
 module.exports = logger

@@ -1,7 +1,7 @@
 {
   "name":"torch",
   "description":"CLI logger with colors and deep inspection.",
-  "version":"0.2.0",
+  "version":"0.2.1",
   "homepage":"http://github.com/TorchlightSoftware/torch",
   "repository":"git://github.com/TorchlightSoftware/torch.git",
   "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
