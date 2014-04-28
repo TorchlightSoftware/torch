@@ -15,6 +15,21 @@ log = (color, args...) ->
 
 logger = curry log, null
 
+# timer functionality
+lastTime = null
+elapsed = (msg...) ->
+  thisTime = new Date
+
+  elapsed = if lastTime
+    (thisTime - lastTime)
+  else
+    0
+
+  logger.white elapsed, 'ms:', msg...
+  lastTime = thisTime
+
+logger.elapsed = elapsed
+
 for color in Object.keys chalk.styles
   logger[color] = curry log, color
 
