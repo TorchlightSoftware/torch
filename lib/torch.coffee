@@ -3,9 +3,13 @@ curry = (fn, args...) -> fn.bind fn.prototype, args...
 chalk = require 'chalk'
 
 log = (color, args...) ->
+
   # Build a deep string representation of the objects in 'args'
   msgs = args.map (a) ->
     if (typeof a) is 'string' then a else inspect a, null, null
+
+  if elapsedEnabled
+    msgs = [getElapsed(), 'ms:'].concat msgs
 
   # If 'color' is known to 'chalk'
   if chalk[color]
@@ -17,7 +21,7 @@ logger = curry log, null
 
 # timer functionality
 lastTime = null
-elapsed = (msg...) ->
+getElapsed = ->
   thisTime = new Date
 
   elapsed = if lastTime
@@ -25,10 +29,12 @@ elapsed = (msg...) ->
   else
     0
 
-  logger.white elapsed, 'ms:', msg...
   lastTime = thisTime
+  return elapsed
 
-logger.elapsed = elapsed
+elapsedEnabled = false
+logger.toggleElapsed = ->
+  elapsedEnabled = !elapsedEnabled
 
 for color in Object.keys chalk.styles
   logger[color] = curry log, color

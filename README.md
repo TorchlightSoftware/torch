@@ -1,6 +1,14 @@
 # Torch
 
-Shed some light on the dark morass that is your code.  A logger with colors and deep inspection.
+Shed some light on the dark morass that is your code.
+
+Torch is a logger with three primary functions:
+
+* supports colors
+* automatically runs util.inspect on all arguments, showing nested object/array contents
+* can be used to show elapsed time
+
+## Basic Usage
 
 ```javascript
 log = require('torch');
@@ -10,6 +18,25 @@ log.gray('stuff:'.blue, stuff);
 log(deepNestedObject);
 
 // {foo: {bar: {baz: 1}}}
+```
+
+## Showing Elapsed Time
+
+This can be helpful in identifying slow areas of code, or in running benchmarks.  You can utilize your existing log statements, and just enable elapsed time printouts.
+
+```javascript
+logger.toggleElapsed();
+
+second = function() {logger.yellow('initiate launch sequence');};
+third = function() {logger.white('begin countdown');};
+
+logger.blue('clear the area');
+setTimeout(second, 30);
+setTimeout(third, 70);
+
+// 0 ms: clear the area
+// 32 ms: initiate launch sequence
+// 39 ms: begin countdown
 ```
 
 Torch uses Chalk.  For a full list of supported colors, see Chalk's readme:  https://github.com/sindresorhus/chalk
