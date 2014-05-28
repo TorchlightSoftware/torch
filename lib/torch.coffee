@@ -6,7 +6,7 @@ log = (color, args...) ->
 
   # Build a deep string representation of the objects in 'args'
   msgs = args.map (a) ->
-    if (typeof a) is 'string' then a else inspect a, null, null
+    if (typeof a) is 'string' then a else inspect a, {depth: depth}
 
   if elapsedEnabled
     msgs = [getElapsed(), 'ms:'].concat msgs
@@ -35,6 +35,10 @@ getElapsed = ->
 elapsedEnabled = false
 logger.toggleElapsed = ->
   elapsedEnabled = !elapsedEnabled
+
+depth = null
+logger.setDepth = (d) ->
+  depth = d
 
 for color in Object.keys chalk.styles
   logger[color] = curry log, color
