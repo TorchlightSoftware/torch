@@ -1,15 +1,14 @@
 {
   "name":"torch",
   "description":"CLI logger with colors and deep inspection.",
-  "version":"0.2.5",
+  "version":"0.2.6",
   "homepage":"http://github.com/TorchlightSoftware/torch",
   "repository":"git://github.com/TorchlightSoftware/torch.git",
   "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
   "main":"./index.js",
 
   "dependencies":{
-    "chalk":"*",
-    "coffee-script":"*"
+    "chalk":"*"
   },
   "devDependencies":{
     "mocha":"*",
